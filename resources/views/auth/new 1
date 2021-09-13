@@ -1,0 +1,12 @@
+                      <div class="form-group{{ $errors->has('middlename') ? ' has-error' : '' }}">
+                            <label for="password" class="col-md-4 control-label">{{ __('Confirm Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="cpassword" type="password" class="form-control @error('password') is-invalid @enderror" name="cpassword" required autocomplete="current-password">
+								@if ($errors->has('cpassword'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('cpassword') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>	
